@@ -1,0 +1,561 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <StartupObject>HIES.FO.App</StartupObject>
+    <ApplicationIcon>HIES.ico</ApplicationIcon>
+    <SignAssembly>False</SignAssembly>
+    <PackageIcon>hies.png</PackageIcon>
+    <Title>Hospitality Industry Enterprise System</Title>
+    <Authors>HIES</Authors>
+    <Copyright>HIES</Copyright>
+    <AssemblyVersion>2.5.0.0</AssemblyVersion>
+    <FileVersion>2.5.0.0</FileVersion>
+    <Company>HIES</Company>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Screens\FrontOffice\PettyCashBookEntries\**" />
+    <Compile Remove="Screens\FrontOffice\PettyCashBook\**" />
+    <Compile Remove="Screens\Shared\Components\**" />
+    <EmbeddedResource Remove="Screens\FrontOffice\PettyCashBookEntries\**" />
+    <EmbeddedResource Remove="Screens\FrontOffice\PettyCashBook\**" />
+    <EmbeddedResource Remove="Screens\Shared\Components\**" />
+    <None Remove="Screens\FrontOffice\PettyCashBookEntries\**" />
+    <None Remove="Screens\FrontOffice\PettyCashBook\**" />
+    <None Remove="Screens\Shared\Components\**" />
+    <Page Remove="Screens\FrontOffice\PettyCashBookEntries\**" />
+    <Page Remove="Screens\FrontOffice\PettyCashBook\**" />
+    <Page Remove="Screens\Shared\Components\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\SpaceMono-Bold.ttf" />
+    <None Remove="Fonts\SpaceMono-BoldItalic.ttf" />
+    <None Remove="Fonts\SpaceMono-Italic.ttf" />
+    <None Remove="Fonts\SpaceMono-Regular.ttf" />
+    <None Remove="Resources\AboutSystem.png" />
+    <None Remove="Resources\acounting.png" />
+    <None Remove="Resources\AddLiability.png" />
+    <None Remove="Resources\AddMiscChargesBookingRecords.png" />
+    <None Remove="Resources\AddMiscChargesInvoice.png" />
+    <None Remove="Resources\AddRecord.png" />
+    <None Remove="Resources\adminpanel.png" />
+    <None Remove="Resources\AHMS.png" />
+    <None Remove="Resources\AHMSHeader.png" />
+    <None Remove="Resources\AllCheckIn.png" />
+    <None Remove="Resources\AllInvoice.png" />
+    <None Remove="Resources\AllReservations.png" />
+    <None Remove="Resources\BackUp.png" />
+    <None Remove="Resources\blockedroom.png" />
+    <None Remove="Resources\Bookings.png" />
+    <None Remove="Resources\BookReservation.png" />
+    <None Remove="Resources\CancelledCheckIn.png" />
+    <None Remove="Resources\CancelledReservation.png" />
+    <None Remove="Resources\ChangePassword.png" />
+    <None Remove="Resources\ChannelManager.png" />
+    <None Remove="Resources\CheckedOut.png" />
+    <None Remove="Resources\CheckedOutInvoiceNotGenerated.png" />
+    <None Remove="Resources\checkin.png" />
+    <None Remove="Resources\CMRates.png" />
+    <None Remove="Resources\Company.png" />
+    <None Remove="Resources\dayclose.png" />
+    <None Remove="Resources\edit.png" />
+    <None Remove="Resources\Excel.png" />
+    <None Remove="Resources\exit.png" />
+    <None Remove="Resources\exit1.png" />
+    <None Remove="Resources\FilterRecord.png" />
+    <None Remove="Resources\Guest.png" />
+    <None Remove="Resources\helpdesk.png" />
+    <None Remove="Resources\hies.png" />
+    <None Remove="Resources\hubconnected.png" />
+    <None Remove="Resources\hubdisconnected.png" />
+    <None Remove="Resources\Liabilities.png" />
+    <None Remove="Resources\ListView.png" />
+    <None Remove="Resources\LMSGenrateInvoice.png" />
+    <None Remove="Resources\LMSInitiate-Processing.png" />
+    <None Remove="Resources\LMSlistInvoices.png" />
+    <None Remove="Resources\LMSListProcessing.png" />
+    <None Remove="Resources\LMSOrder.png" />
+    <None Remove="Resources\LMSOrderList.png" />
+    <None Remove="Resources\LockScreen.png" />
+    <None Remove="Resources\MiscCharegesBookingRecord.png" />
+    <None Remove="Resources\MiscCharges.png" />
+    <None Remove="Resources\MiscChargesInvoiceRecord.png" />
+    <None Remove="Resources\PaidCashInvoice.png" />
+    <None Remove="Resources\PaidCreditInvoice.png" />
+    <None Remove="Resources\PaidLiabilites.png" />
+    <None Remove="Resources\payment.png" />
+    <None Remove="Resources\paymentvoucher.png" />
+    <None Remove="Resources\PDF.png" />
+    <None Remove="Resources\PendingCashInvoice.png" />
+    <None Remove="Resources\PendingCheckIn.png" />
+    <None Remove="Resources\PendingCreditInvoice.png" />
+    <None Remove="Resources\PendingLiabilities.png" />
+    <None Remove="Resources\PendingReservations.png" />
+    <None Remove="Resources\PettyCashBook.png" />
+    <None Remove="Resources\print.png" />
+    <None Remove="Resources\Receipt.png" />
+    <None Remove="Resources\refresh.png" />
+    <None Remove="Resources\Reports.png" />
+    <None Remove="Resources\ReservationChart.png" />
+    <None Remove="Resources\reservations.png" />
+    <None Remove="Resources\Rooms.png" />
+    <None Remove="Resources\RoomsInventory.png" />
+    <None Remove="Resources\search.png" />
+    <None Remove="Resources\SlipView.png" />
+    <None Remove="Resources\today-check-out.png" />
+    <None Remove="Resources\Vendors.png" />
+    <None Remove="Resources\view.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>6</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>00020813-0000-0000-c000-000000000046</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>false</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="HIES.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoCompleteTextBox" Version="1.7.1" />
+    <PackageReference Include="LiveChartsCore.SkiaSharpView.WPF" Version="2.0.0-beta.701" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="7.0.11" />
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    <PackageReference Include="RS.WPF.CTextBox" Version="1.0.2" />
+    <PackageReference Include="RS.WPF.MessageDisplay" Version="1.0.0" />
+    <PackageReference Include="RS.WPF.SearchBox" Version="1.0.2" />
+    <PackageReference Include="Syncfusion.DataGridExcelExport.Wpf" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.Pdf.Wpf" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.PdfViewer.WPF" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.SfChart.WPF" Version="22.1.34" />
+    <PackageReference Include="Syncfusion.SfGrid.WPF" Version="22.1.34" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HIES.API.FO\HIES.API.FO.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\SpaceMono-Bold.ttf" />
+    <Resource Include="Fonts\SpaceMono-BoldItalic.ttf" />
+    <Resource Include="Fonts\SpaceMono-Italic.ttf" />
+    <Resource Include="Fonts\SpaceMono-Regular.ttf" />
+    <Resource Include="Resources\AboutSystem.png" />
+    <Resource Include="Resources\acounting.png" />
+    <Resource Include="Resources\AddLiability.png" />
+    <Resource Include="Resources\AddMiscChargesBookingRecords.png" />
+    <Resource Include="Resources\AddMiscChargesInvoice.png" />
+    <Resource Include="Resources\AddRecord.png" />
+    <Resource Include="Resources\adminpanel.png" />
+    <Resource Include="Resources\AllCheckIn.png" />
+    <Resource Include="Resources\AllInvoice.png" />
+    <Resource Include="Resources\AllReservations.png" />
+    <Resource Include="Resources\BackUp.png" />
+    <Resource Include="Resources\blockedroom.png" />
+    <Resource Include="Resources\Bookings.png" />
+    <Resource Include="Resources\BookReservation.png" />
+    <Resource Include="Resources\CancelledCheckIn.png" />
+    <Resource Include="Resources\CancelledReservation.png" />
+    <Resource Include="Resources\ChangePassword.png" />
+    <Resource Include="Resources\ChannelManager.png" />
+    <Resource Include="Resources\CheckedOut.png" />
+    <Resource Include="Resources\CheckedOutInvoiceNotGenerated.png" />
+    <Resource Include="Resources\checkin.png" />
+    <Resource Include="Resources\CMRates.png" />
+    <Resource Include="Resources\Company.png" />
+    <Resource Include="Resources\dayclose.png" />
+    <Resource Include="Resources\edit.png" />
+    <Resource Include="Resources\Excel.png" />
+    <Resource Include="Resources\exit.png" />
+    <Resource Include="Resources\exit1.png" />
+    <Resource Include="Resources\FilterRecord.png" />
+    <Resource Include="Resources\Guest.png" />
+    <Resource Include="Resources\helpdesk.png" />
+    <Resource Include="Resources\hies.png" />
+    <Resource Include="Resources\hubconnected.png" />
+    <Resource Include="Resources\hubdisconnected.png" />
+    <Resource Include="Resources\Liabilities.png" />
+    <Resource Include="Resources\ListView.png" />
+    <Resource Include="Resources\LMSGenrateInvoice.png" />
+    <Resource Include="Resources\LMSInitiate-Processing.png" />
+    <Resource Include="Resources\LMSlistInvoices.png" />
+    <Resource Include="Resources\LMSListProcessing.png" />
+    <Resource Include="Resources\LMSOrder.png" />
+    <Resource Include="Resources\LMSOrderList.png" />
+    <Resource Include="Resources\LockScreen.png" />
+    <Resource Include="Resources\MiscCharegesBookingRecord.png" />
+    <Resource Include="Resources\MiscCharges.png" />
+    <Resource Include="Resources\MiscChargesInvoiceRecord.png" />
+    <Resource Include="Resources\PaidCashInvoice.png" />
+    <Resource Include="Resources\PaidCreditInvoice.png" />
+    <Resource Include="Resources\PaidLiabilites.png" />
+    <Resource Include="Resources\payment.png" />
+    <Resource Include="Resources\paymentvoucher.png" />
+    <Resource Include="Resources\PDF.png" />
+    <Resource Include="Resources\PendingCashInvoice.png" />
+    <Resource Include="Resources\PendingCheckIn.png" />
+    <Resource Include="Resources\PendingCreditInvoice.png" />
+    <Resource Include="Resources\PendingLiabilities.png" />
+    <Resource Include="Resources\PendingReservations.png" />
+    <Resource Include="Resources\PettyCashBook.png" />
+    <Resource Include="Resources\print.png" />
+    <Resource Include="Resources\Receipt.png" />
+    <Resource Include="Resources\refresh.png" />
+    <Resource Include="Resources\Reports.png" />
+    <Resource Include="Resources\ReservationChart.png" />
+    <Resource Include="Resources\reservations.png" />
+    <Resource Include="Resources\Rooms.png" />
+    <Resource Include="Resources\RoomsInventory.png" />
+    <Resource Include="Resources\search.png" />
+    <Resource Include="Resources\SlipView.png" />
+    <Resource Include="Resources\today-check-out.png" />
+    <Resource Include="Resources\Vendors.png" />
+    <Resource Include="Resources\view.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Screens\Developers\LinkedPOS\Add.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Developers\LinkedPOS\List.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Developers\LinkedPOS\View.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\ChartPanel\Charts\ChartBookingStatus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\ChartPanel\Charts\ChartRoomsStatus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\ChartPanel\Charts\ChartRoomPlans.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\ChartPanel\Charts\ChartGuestTypes.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\CheckIn\GridViews\GridAdvacePayments.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\Invoices\PrintWithOptions.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\MiscCharges\Invoice\Edit.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\RoomsCMRates\ListOTAStatus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\RoomsCM\SelectRoomTypesToLink.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\InvoiceHeaderFooter\Add.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\InvoiceHeaderFooter\List.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\InvoiceModify\EditCharges.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\InvoiceModify\EditRoomAllotement.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\Invoices\PrintSelectedCharges.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\MiscCharges\ChargesHeads\Add.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\MiscCharges\ChargesHeads\List.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\MiscCharges\Invoice\Add.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\MiscCharges\Invoice\View.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\Reservations\OnLineBookings\View.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\Reports\OccupencyAnalysisReport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\RoomsInventory\ReUpdateInv.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\RoomsInventory\Add.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\RoomsInventory\ListOTAStatus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\FrontOffice\SystemSettings\ClientEMailSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Screens\Shared\ConnectToDatabase.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Screens\Developers\GetServerDatabaseDetailsCloud.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Developers\LinkedPOS\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Developers\LinkedPOS\GetServerDatabaseDetails.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Developers\LinkedPOS\List.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\Developers\LinkedPOS\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\CheckIn\GridViews\GridAdvacePayments.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\CheckIn\GridViews\GridRoomAllotements.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\DailyClosings\BulkClosing.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Invoices\PrintWithOptions.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\Bookings\Charges\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\Bookings\Charges\Edit.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\Bookings\Charges\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\Bookings\Edit.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\Invoice\Edit.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\Invoice\Charges\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\Invoice\Charges\Edit.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\Invoice\Charges\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Printing\SendMail.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reports\DayEndReport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\RoomBlocking\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\RoomBlocking\GridList.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\RoomBlocking\List.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\RoomsCM\SelectRoomTypesToLink.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\InvoiceHeaderFooter\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\InvoiceHeaderFooter\List.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\InvoiceModify\EditPayment.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\InvoiceModify\EditCharges.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\InvoiceModify\EditRoomAllotement.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\Invoices\PrintSelectedCharges.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\ChargesHeads\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\ChargesHeads\List.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\Invoice\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\Invoice\List.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\MiscCharges\Invoice\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OffLineBookings\GridViews\GridReservation.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OnLineBookings\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reports\OccupencyAnalysisReport.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\ActionLogs\List.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\ActionLogs\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OtherBookingTypeCharges\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OtherBookingTypeCharges\List.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OtherBookingTypeCharges\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OtherBookingTypes\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OtherBookingTypes\List.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OffLineBookings\OtherBookings\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OffLineBookings\OtherBookings\Edit.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OffLineBookings\OtherBookings\List.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OffLineBookings\OtherBookings\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OffLineBookings\RoomBookings\Edit.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OffLineBookings\RoomBookings\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OffLineBookings\RoomBookings\List.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OffLineBookings\RoomBookings\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\Reservations\OffLineBookings\Edit.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\RoomsInventory\ReUpdateInv.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\FrontOffice\RoomsInventory\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\FrontOffice\SystemSettings\ClientEMailSettings.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Screens\LMSModule\Logs\List.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\LMSModule\Logs\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\LMSModule\LMSOrders\Edit.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\LMSModule\LMSOrders\OrderItems\Add.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\LMSModule\LMSOrders\OrderItems\Edit.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\LMSModule\LMSOrders\OrderItems\View.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Screens\Shared\ConnectToDatabase.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
