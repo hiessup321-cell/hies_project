@@ -1,17 +1,15 @@
-﻿global using System;
-global using System.Collections.Generic;
-global using System.Linq;
+﻿global using System.Data;
 global using System.Text;
-global using System.Threading.Tasks;
-global using HIES.API.FO.Shared;
-global using HIES.FO.Codes;
-global using System.Windows;
+global using Microsoft.EntityFrameworkCore;
 global using HIES.API.FO.DatabaseDesign;
 global using HIES.API.FO.Shared;
+global using HIES.API.FO.DataModel;
+global using HIES.API.FO.ActionLogs;
 
-namespace HIES.FO
+namespace HIES.API.FO
 {
-    internal class GlobalUsing
+    public class GlobalUsing
     {
+
     }
 }
