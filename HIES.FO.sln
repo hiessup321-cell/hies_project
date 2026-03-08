@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HIES.FO", "HIES.FRONTOFFICE\HIES.FO.csproj", "{6969CF75-E687-4FF7-9DAE-667B87B2EF2A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HIES.API.FO", "HIES.API.FO\HIES.API.FO.csproj", "{D51F346D-A2B4-4503-B110-E22C84C14D72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6969CF75-E687-4FF7-9DAE-667B87B2EF2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6969CF75-E687-4FF7-9DAE-667B87B2EF2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6969CF75-E687-4FF7-9DAE-667B87B2EF2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6969CF75-E687-4FF7-9DAE-667B87B2EF2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D51F346D-A2B4-4503-B110-E22C84C14D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D51F346D-A2B4-4503-B110-E22C84C14D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D51F346D-A2B4-4503-B110-E22C84C14D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D51F346D-A2B4-4503-B110-E22C84C14D72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83871E8E-8FF6-487C-BF37-A4BC2D1021E1}
+	EndGlobalSection
+EndGlobal
